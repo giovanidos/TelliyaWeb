@@ -1,0 +1,40 @@
+<div class="base">
+  <app-auth-header class="header"></app-auth-header>
+
+    <div class="form">
+      <h5 class="title">Creation du compte</h5>
+      <hr class="divider">
+      <div class="double-field">
+        <div class="field">
+          <label for="name">Prenom</label>
+          <input type="text" placeholder="Votre prenom">
+        </div>
+        <div class="field">
+            <label for="lastname">Nom</label>
+            <input type="text" placeholder="Votre nom">
+        </div>
+      </div>
+      <label for="phone">Telephone</label>
+      <div class="phone">
+          <span class="phone-code">🇲🇱 +223 <i class="material-icons">expand_more</i></span>
+          <input type="tel" id="phone" placeholder="Entrer votre numero de telephone">
+      </div>
+      <label for="pass">Mot de passe</label>
+      <input type="password" id="pass" placeholder="votre mot de passe">
+      <label for="conf-pass">Confirmez le mot de passe</label>
+      <input type="password" id="conf-pass" placeholder="votre mot de passe a nouveau">
+      <label>Choisissez votre type de comppte</label>
+      <mat-radio-group class="radio-group" >
+          <mat-radio-button class="radio-item" checked="true" color="warn" value="customer" >client</mat-radio-button>
+          <mat-radio-button class="radio-item" value="rider" color="warn">livreur</mat-radio-button>
+      </mat-radio-group>
+      <button class="send-btn">creer le compte</button>
+      <hr class="divider">
+      <div class="navigate">
+          <button class="btn">Se connectez</button>
+          <button class="btn">Creer une boutique</button>
+      </div>
+    </div>
+
+  <app-auth-footer class="footer"></app-auth-footer>
+</div>

@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+@import './assets/common';
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+html, body { width: 100%; }
+body { 
+    margin: 0;
+    font-family: "Fira Sans",Roboto, "Helvetica Neue", sans-serif;
+    font-weight: 300;
+    color: $text-color1;
+    background-color: #f5f7fa;
+}

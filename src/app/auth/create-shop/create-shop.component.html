@@ -1,0 +1,88 @@
+<div class="base">
+    <app-auth-header class="header"></app-auth-header>
+
+    <div class="content" *ngIf="true">
+      <h5 class="title">Creation de la boutique</h5>
+      <hr class="divider">
+      <label for="name">Nom de boutique</label>
+      <input type="text" placeholder="Entrer le nom de la boutique">
+      <label for="phone">Telephone</label>
+      <div class="phone">
+          <span class="phone-code">🇲🇱 +223 <i class="material-icons">expand_more</i></span>
+          <input type="tel" id="phone" placeholder="Entrer votre numero de telephone">
+      </div>
+      <div class="double-field">
+          <div class="field">
+            <label for="identif">Identifiant</label>
+            <input type="password" placeholder="Entrer un identifiant unique">
+          </div>
+          <div class="field">
+              <label for="conf_identif">Confirmez l'identifiant</label>
+              <input type="password" placeholder="Confirmez l'identifiant">
+          </div>
+      </div>
+      <label for="market">Choisissez votre marche principale</label>
+      <span class="select-field">Informatique <i class="material-icons">expand_more</i></span>
+      <div class="double-field">
+          <div class="field">
+            <label for="country">Le pays</label>
+            <span class="select-field1">🇲🇱 Mali <i class="material-icons">expand_more</i></span>
+          </div>
+          <div class="field">
+              <label for="region">La region</label>
+              <span class="select-field1">Bamako <i class="material-icons">expand_more</i></span>
+          </div>
+      </div>
+      <div class="double-field">
+          <div class="field">
+            <label for="town">Le quartier</label>
+            <span class="select-field1">Missabougou <i class="material-icons">expand_more</i></span>
+          </div>
+          <div class="field">
+              <label for="complement">adresse</label>
+              <input type="text" placeholder="21 rue modibo keita">
+          </div>
+      </div>
+      <label>Choissisez le type de la boutique</label>
+      <mat-radio-group class="radio-group" >
+          <mat-radio-button class="radio-item" checked="true" color="warn" value="det" >Detaillant</mat-radio-button>
+          <mat-radio-button class="radio-item" value="Gros" color="warn">Grossis</mat-radio-button>
+          <mat-radio-button class="radio-item" value="prod" color="warn">Producteur</mat-radio-button>
+      </mat-radio-group>
+      <button class="send-btn">Creer la boutique</button>
+      <p class="agreement">En cliquant sur creer la boutique, vous acceptez les <a href="#">conditions d'ulisations</a>, les <a href="#">politiques de confidentialite</a>  et les regles relatives la <a>protection de donnees personnelle</a> de telliya groupe.</p>
+      <hr class="divider">
+      <div class="navigate">
+          <button class="btn">Se connectez</button>
+          <button class="btn">Creer un compte</button>
+      </div>
+    </div>
+    
+    <!-- Create shop owner -->
+
+    <div class="content" *ngIf="false">
+      <h5 class="title">Ajouter un proprietaire</h5>
+      <hr class="divider">
+      <div class="double-field">
+          <div class="field">
+            <label for="name_owner">Prenom</label>
+            <input type="text" placeholder="Entrer le prenom ">
+          </div>
+          <div class="field">
+              <label for="lastname_owner">Nom</label>
+              <input type="text" placeholder="Entrer le nom ">
+          </div>
+      </div>
+      <label for="phone">Telephone</label>
+      <div class="phone">
+          <span class="phone-code">🇲🇱 +223 <i class="material-icons">expand_more</i></span>
+          <input type="tel" id="phone" placeholder="Entrer le numero de telephone">
+      </div>
+      <label for="pass_owner">Mot de passe</label>
+      <input type="password" placeholder="Entrer votre mot de passe">
+      <label for="conf_pass_owner">Confirmez le mot de passe</label>
+      <input type="password" placeholder="Le mot de passe a nouveau ">
+      <button class="send-btn marge">Ajouter</button>
+    </div>
+    <app-auth-footer class="footer"></app-auth-footer>
+  </div>

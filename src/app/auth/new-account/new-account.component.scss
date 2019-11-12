@@ -1,0 +1,99 @@
+@import '../../../assets/common';
+
+.base{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    .header{
+        width: 100%;
+    }
+
+    .footer {
+        width: 100%;
+    }
+}
+
+
+
+.form{
+    width: 90%;
+    margin-top: 35px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0px 1px 4px rgba($color: #000000, $alpha: .15);
+    @media screen and (min-width: 600px) {
+        width: 450px;
+    }
+
+    .title{
+        width: 90%;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $text-color1;
+        font-family: 'Fira Sans';
+    }
+
+    .divider{
+        @include divider(100%);
+    }
+
+    @include doubleFieldStyle(90%);
+
+    label{
+        @include labelStyle(90%,true);
+    }
+
+    > input {
+        @include fieldStyle(90%);
+    }
+
+    @include phoneFieldStyle(90%);
+
+    .radio-group{
+        width: 90%;
+        display: flex;
+        margin: 5px 0px 25px 0px;
+        position: relative;
+
+        .radio-item{
+            color: $text-color1;
+            font-family: "Fira Sans";
+            width: 40%;
+            font-size: 0.9rem;
+        }
+    }
+
+    .send-btn{
+        width: 90%;
+        height: 36px;
+        background-color: #00a362;
+        border: 1px solid #023f2b ;
+        color: white;
+        border-radius: 3px;
+        margin-bottom: 25px;
+        cursor: pointer;
+    }
+
+    .navigate{
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        margin: 25px 0px;
+        .btn{
+            width: 47%;
+            height: 33px;
+            border: 1px solid #aeafb3;
+            color: $text-color1;
+            border-radius: 3px;
+            background-color: #ebecf0;
+            cursor: pointer;
+            // box-shadow: 1px 1px 2px rgba($color: #00a362, $alpha: .75),-1px -1px 2px rgba($color: #00a362, $alpha: .75);
+        }
+    }
+}

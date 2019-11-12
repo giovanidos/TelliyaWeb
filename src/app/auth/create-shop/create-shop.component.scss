@@ -1,0 +1,110 @@
+@import '../../../assets/common';
+
+.base{
+    width: 100%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    .header{
+        width: 100%;
+    }
+    .footer{
+        width: 100%;
+    }
+}
+
+.content{
+    width: 90%;
+    margin-top: 35px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0px 1px 4px rgba($color: #000000, $alpha: .15);
+    @media screen and (min-width: 600px) {
+        width: 450px;
+    }
+
+    .title{
+        width: 90%;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $text-color1;
+        font-family: 'Fira Sans';
+    }
+
+    .divider{
+        @include divider(100%);
+    }
+
+    @include phoneFieldStyle(90%);
+    @include doubleFieldStyle(90%);
+
+    > label{
+        @include labelStyle(90%,true);
+    }
+
+    > input {
+        @include fieldStyle(90%);
+    }
+
+    .select-field{
+        @include selectStyle(90%)
+    }
+    .select-field1{
+        @include selectStyle(100%)
+    }
+
+    .radio-group{
+        width: 90%;
+        display: flex;
+        margin: 5px 0px 25px 0px;
+        position: relative;
+
+        .radio-item{
+            color: $text-color1;
+            font-family: "Fira Sans";
+            width: 30%;
+            font-size: 0.9rem;
+        }
+    }
+    .agreement{
+        @include agreement(90%);
+    }
+    .send-btn{
+        width: 90%;
+        height: 36px;
+        background-color: #00a362;
+        border: 1px solid #023f2b ;
+        color: white;
+        border-radius: 3px;
+        font-size: 1.0rem;
+        margin-bottom: 25px;
+        cursor: pointer;
+    }
+
+    .marge{
+        margin-top: 25px;
+    }
+    .navigate{
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        margin: 35px 0px;
+        .btn{
+            width: 47%;
+            height: 33px;
+            border: 1px solid #aeafb3;
+            color: $text-color1;
+            border-radius: 3px;
+            font-family: 'Fira Sans';
+            background-color: #ebecf0;
+            cursor: pointer;
+            // box-shadow: 1px 1px 2px rgba($color: #00a362, $alpha: .75),-1px -1px 2px rgba($color: #00a362, $alpha: .75);
+        }
+    }
+}

@@ -1,0 +1,130 @@
+
+$text-color1: rgb(53, 51, 51);
+$border-color: #ebecf0;
+$border-color1: #c5c6ca;
+@mixin fieldStyle($width) {
+    width: $width;
+    height: 36px;
+    border: 1px solid $border-color1;
+    padding: 0px 8px;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    line-height: 20px;
+    &::placeholder{
+        font-size: 0.7rem;
+        font-family: 'Fira Sans';
+    }
+
+    &:focus{
+        outline: none;
+        box-shadow: 2px 2px 5px rgba($color: #00a362, $alpha: .35),-2px -2px 5px rgba($color: #00a362, $alpha: .35);
+        border: 1.1px solid #00a362 !important;
+    }
+}
+
+@mixin selectStyle($width) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        width: $width;
+        height: 35px;
+        color: #000000;
+        cursor: pointer;
+        border: 1px solid $border-color1;
+        padding: 0 2%;
+        border-radius: 3px;
+        font-size: 90%;
+        i{
+            font-size: 160%;
+        }
+}
+
+@mixin  labelStyle($width,$require: false) {
+    width: $width;
+    display: block;
+    margin: 25px 0 5px 0;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: rgb(53, 51, 51);
+    @if $require {
+        &::after{
+            content: "*";
+            color: red;
+        }
+    }
+}
+
+@mixin doubleFieldStyle($width) {
+    .double-field{
+        width: $width;
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        
+        .field{
+            width: 48%;
+            position: relative; 
+            label{
+                @include labelStyle(100%,true);
+            }
+            input{
+                @include fieldStyle(100%);
+            }
+        }
+    }
+}
+
+
+@mixin phoneFieldStyle($width) {
+    .phone{
+        width: $width;
+        height: 35px;
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        .phone-code{
+            display: flex; 
+            justify-content: space-evenly;
+            align-items: center;
+            width: 20%;
+            height: 100%;
+            color: #000000;
+            cursor: pointer;
+            border: 1px solid $border-color1;
+            border-radius: 3px;
+            font-size: 70%;
+            i{
+                font-size: 140%;
+            }
+            // border-right: none;
+        }
+        input{
+            @include fieldStyle(79%);
+        }
+    }
+}
+
+@mixin agreement($width) {
+    width: $width;
+    font-family: 'Fira Sans';
+    font-size: 0.75rem;
+    margin-bottom: 10px;
+    text-align: center;
+    a{
+        text-decoration: none;
+        color: rgb(77, 173, 238);
+    }
+}
+
+@mixin divider($size,$horizontal: true ,$color: $border-color) {
+    border: none;
+    @if $horizontal {
+        width: $size;
+        border-top: 1.2px solid $color;        
+    } @else{
+        height: $size;
+        border-right: 1px solid $color;
+    }
+
+}

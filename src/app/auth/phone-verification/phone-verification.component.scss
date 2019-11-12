@@ -1,0 +1,98 @@
+@import '../../../assets/common';
+
+.base{
+    width: 100%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    .header{
+        width: 100%;
+    }
+    .footer{
+        width: 100%;
+    }
+}
+
+.content{
+    width: 90%;
+    margin-top: 35px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0px 1px 4px rgba($color: #000000, $alpha: .15);
+    @media screen and (min-width: 600px) {
+        width: 450px;
+    }
+
+    .title{
+        width: 90%;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $text-color1;
+        font-family: 'Fira Sans';
+    }
+
+    .explain{
+        width: 90%;
+        font-size: 0.9rem;
+        margin: 20px 0px 0px 0px;
+    }
+
+    .divider{
+        @include divider(100%);
+    }
+
+
+    > label{
+        @include labelStyle(90%,true);
+    }
+
+    > input {
+        @include fieldStyle(90%);
+    }
+
+    .resend-code{
+        width: 90%;
+        display: flex;
+        justify-content: flex-end;
+        margin: 10px 0 0 0 ;
+        > span{
+            text-decoration: none;
+            color: dodgerblue;
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+            i{
+                margin: 0 6px;
+                font-size: 1.1rem;
+            }
+        }
+    }
+
+    .navigate{
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        margin: 35px 0px;
+        .btn{
+            width: 47%;
+            height: 33px;
+            border: 1px solid #aeafb3;
+            color: $text-color1;
+            border-radius: 3px;
+            background-color: #ebecf0;
+            cursor: pointer;
+            // box-shadow: 1px 1px 2px rgba($color: #00a362, $alpha: .75),-1px -1px 2px rgba($color: #00a362, $alpha: .75);
+        }
+        .verify{
+            background-color: #00a362;
+            border:1.2px solid #023f2b ;
+            color: white;
+        }
+    }
+}
