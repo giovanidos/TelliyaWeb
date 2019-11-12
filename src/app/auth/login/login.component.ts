@@ -18,6 +18,10 @@ export class LoginComponent implements OnInit {
   }
 
   onSend(){
-    console.log(this.con_phone);
+    alert(this.con_pass)
+  }
+
+  onNavigate(value: string){
+
   }
 }

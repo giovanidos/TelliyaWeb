@@ -2,17 +2,17 @@
     <app-auth-header class="header"></app-auth-header>
   
     <div class="content">
-      <div class="form">
+      <form class="form" >
         <h5 class="text-connexion">Connexion</h5>
         <hr class="divider">
         <span class="error" *ngIf="false">Vos identifiants sont incorrect.</span>
         <label for="phone">Telephone</label>
         <div class="phone">
             <span class="phone-code">🇲🇱 +223 <i class="material-icons">expand_more</i></span>
-            <input [(ngModel)]="con_phone" type="tel" id="phone" placeholder="Entrer votre numero de telephone">
+            <input [(ngModel)]="con_phone" name="name" type="tel" id="phone" placeholder="Entrer votre numero de telephone">
         </div>
         <label for="pass">Mot de passe</label>
-        <input [(ngModel)]="con_pass" type="password" id="pass" placeholder="Entrer votre mot de passe">
+        <input [(ngModel)]="con_pass" name="pass" type="password" id="pass" placeholder="Entrer votre mot de passe">
         <div class="forgot-pass">
           <a href="#">mot de passe oubliez ?</a>
         </div>
@@ -22,7 +22,7 @@
           <button class="btn" (click)="onNavigate('NEW_COMPTE')">Creer un compte</button>
           <button class="btn" (click)="onNavigate('NEW_SHOP')">Creer une boutique</button>
         </div>
-      </div>
+      </form>
     </div>
   
     <app-auth-footer class="footer"></app-auth-footer>
