@@ -15,6 +15,7 @@ import {MatRadioModule} from '@angular/material/radio';
 import { PhoneVerificationComponent } from './auth/phone-verification/phone-verification.component';
 import { CreateShopComponent } from './auth/create-shop/create-shop.component';
 import { FormsModule } from '@angular/forms';
+import { SelectDialogComponent } from './dialog/select-dialog/select-dialog.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FormsModule } from '@angular/forms';
     AuthFooterComponent,
     NewAccountComponent,
     PhoneVerificationComponent,
-    CreateShopComponent
+    CreateShopComponent,
+    SelectDialogComponent
   ],
   imports: [
     MatButtonModule,

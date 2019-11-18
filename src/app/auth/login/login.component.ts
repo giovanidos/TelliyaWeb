@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router} from '@angular/router'
 
 @Component({
   selector: 'app-login',
@@ -9,10 +10,10 @@ export class LoginComponent implements OnInit {
   con_phone = "";
   con_pass = "";
   error = {
-    'status': false,
+    'status': true,
     'message': "Vos identifiants sont incorrectent"
   }
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
@@ -22,6 +23,10 @@ export class LoginComponent implements OnInit {
   }
 
   onNavigate(value: string){
-
+      if(value === "NEW_COMPTE"){
+        this.router.navigateByUrl('new-account');
+      }else if( value === "NEW_SHOP"){
+        this.router.navigateByUrl('create-shop');
+      }
   }
 }

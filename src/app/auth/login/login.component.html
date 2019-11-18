@@ -5,7 +5,7 @@
       <form class="form" >
         <h5 class="text-connexion">Connexion</h5>
         <hr class="divider">
-        <span class="error" *ngIf="false">Vos identifiants sont incorrect.</span>
+        <span class="error" *ngIf="error.status">{{error.message}}</span>
         <label for="phone">Telephone</label>
         <div class="phone">
             <span class="phone-code">🇲🇱 +223 <i class="material-icons">expand_more</i></span>

@@ -1,0 +1,22 @@
+<div class="base">
+  <h5 class="header"> Selectionne le pays</h5>
+
+  <div class="content" data-simplebar>
+      <div class="items" *ngFor="let val of lists">
+        <label for="{{val.id}}" class="left">
+          <span class="icon">{{val.icon}}</span>
+          <div class="left-1">
+            <span class="title">{{val.title}}</span>
+            <span class="subtitle">{{val.subtitle}}</span>
+          </div>
+        </label>
+        <input name="country" type="radio" id="{{val.id}}">
+      </div>
+  </div>
+
+  <div class="actions">
+    <button class="clear">Effacer tout</button>
+    <button class="done">Terminer</button>
+  </div>
+</div>
+

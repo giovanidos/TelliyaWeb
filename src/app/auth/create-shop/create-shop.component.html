@@ -49,12 +49,12 @@
           <mat-radio-button class="radio-item" value="Gros" color="warn">Grossis</mat-radio-button>
           <mat-radio-button class="radio-item" value="prod" color="warn">Producteur</mat-radio-button>
       </mat-radio-group>
-      <button class="send-btn">Creer la boutique</button>
+      <button class="send-btn" (click)="onSend()">Creer la boutique</button>
       <p class="agreement">En cliquant sur creer la boutique, vous acceptez les <a href="#">conditions d'ulisations</a>, les <a href="#">politiques de confidentialite</a>  et les regles relatives la <a>protection de donnees personnelle</a> de telliya groupe.</p>
       <hr class="divider">
       <div class="navigate">
-          <button class="btn">Se connectez</button>
-          <button class="btn">Creer un compte</button>
+          <button class="btn" (click)="onNavigate('LOGIN')">Se connectez</button>
+          <button class="btn" (click)="onNavigate('NEW_COMPTE')">Creer un compte</button>
       </div>
     </div>
     
@@ -82,7 +82,7 @@
       <input type="password" placeholder="Entrer votre mot de passe">
       <label for="conf_pass_owner">Confirmez le mot de passe</label>
       <input type="password" placeholder="Le mot de passe a nouveau ">
-      <button class="send-btn marge">Ajouter</button>
+      <button class="send-btn marge" (click)="onSendOwner()">Ajouter</button>
     </div>
     <app-auth-footer class="footer"></app-auth-footer>
   </div>

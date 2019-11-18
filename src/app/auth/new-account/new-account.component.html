@@ -1,7 +1,7 @@
 <div class="base">
   <app-auth-header class="header"></app-auth-header>
 
-    <div class="form">
+    <form class="form" #account="ngForm">
       <h5 class="title">Creation du compte</h5>
       <hr class="divider">
       <div class="double-field">
@@ -17,7 +17,7 @@
       <label for="phone">Telephone</label>
       <div class="phone">
           <span class="phone-code">🇲🇱 +223 <i class="material-icons">expand_more</i></span>
-          <input type="tel" id="phone" placeholder="Entrer votre numero de telephone">
+          <input  type="tel" id="phone" placeholder="Entrer votre numero de telephone">
       </div>
       <label for="pass">Mot de passe</label>
       <input type="password" id="pass" placeholder="votre mot de passe">
@@ -28,13 +28,13 @@
           <mat-radio-button class="radio-item" checked="true" color="warn" value="customer" >client</mat-radio-button>
           <mat-radio-button class="radio-item" value="rider" color="warn">livreur</mat-radio-button>
       </mat-radio-group>
-      <button class="send-btn">creer le compte</button>
+      <button class="send-btn" (click)="onSend()" >creer le compte</button>
       <hr class="divider">
       <div class="navigate">
-          <button class="btn">Se connectez</button>
-          <button class="btn">Creer une boutique</button>
+          <button class="btn" (click)="onNavigate('LOGIN')">Se connectez</button>
+          <button class="btn" (click)="onNavigate('NEW_SHOP')">Creer une boutique</button>
       </div>
-    </div>
+    </form>
 
   <app-auth-footer class="footer"></app-auth-footer>
 </div>

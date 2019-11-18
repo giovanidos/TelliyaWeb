@@ -1,5 +1,6 @@
 
 $text-color1: rgb(53, 51, 51);
+$color0: #00a362;
 $border-color: #ebecf0;
 $border-color1: #c5c6ca;
 @mixin fieldStyle($width) {
@@ -17,8 +18,8 @@ $border-color1: #c5c6ca;
 
     &:focus{
         outline: none;
-        box-shadow: 2px 2px 5px rgba($color: #00a362, $alpha: .35),-2px -2px 5px rgba($color: #00a362, $alpha: .35);
-        border: 1.1px solid #00a362 !important;
+        box-shadow: 2px 2px 5px rgba($color: $color0, $alpha: .35),-2px -2px 5px rgba($color: $color0, $alpha: .35);
+        border: 1.1px solid $color0 !important;
     }
 }
 
@@ -44,7 +45,7 @@ $border-color1: #c5c6ca;
     width: $width;
     display: block;
     margin: 25px 0 5px 0;
-    font-size: 0.9rem;
+    font-size: 0.82rem;
     font-weight: 400;
     color: rgb(53, 51, 51);
     @if $require {
@@ -61,9 +62,13 @@ $border-color1: #c5c6ca;
         display: flex;
         position: relative;
         justify-content: space-between;
+        flex-wrap: wrap;
         
         .field{
-            width: 48%;
+            width: 100%;
+            @media screen and (min-width: 600px) {
+                width: 48%;
+            }
             position: relative; 
             label{
                 @include labelStyle(100%,true);
@@ -108,7 +113,7 @@ $border-color1: #c5c6ca;
 @mixin agreement($width) {
     width: $width;
     font-family: 'Fira Sans';
-    font-size: 0.75rem;
+    font-size: 0.715rem;
     margin-bottom: 10px;
     text-align: center;
     a{
@@ -127,4 +132,60 @@ $border-color1: #c5c6ca;
         border-right: 1px solid $color;
     }
 
+}
+
+@mixin checkElementStyle($color,$size) {
+    
+    input[type=radio], input[type=checkbox] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+    }
+
+    input[type=radio], input[type=checkbox] {
+        border-radius: 50%;
+        height: $size;
+        width: $size;
+        background: #fff;
+        border: 2.5px solid #ccc;
+        position: relative;
+    }
+
+    input[type=checkbox]{
+        border-radius: 3.5px;
+    }
+
+    input[type=radio]:checked, input[type=checkbox]:checked{
+        border-color: $color0;
+        position: relative;
+    }
+
+    input[type=checkbox]:checked{
+        background-color: $color0;
+    }
+
+    input[type=radio]:checked::after, input[type=checkbox]:checked::after  {
+            position: absolute;
+            content: "";
+            display: block;
+            width: $size / 2;
+            height: $size / 2;
+            top: 50%;
+            left: 50%;
+            color: white;
+            font-size: $size * 0.84;
+            transform: translate(-50%,-50%);
+            border-radius: 50%;
+            background-color: rgb(29, 165, 135);
+    }
+
+    input[type=checkbox]:checked::after{
+        font-family: FontAwesome;
+        content: "\2713";
+        background-color: inherit;
+        border-radius: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }

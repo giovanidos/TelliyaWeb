@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-new-account',
@@ -7,18 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewAccountComponent implements OnInit {
 
-  option1 = {
-    "link": "login",
-    "name": "connexion"
-  }
 
-  option2 = {
-    "link": "new-shop",
-    "name": "nouveau boutique"
-  }
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
+  onSend(){
+    
+  }
+
+  onNavigate(value: string){
+    if( value === "LOGIN"){
+      this.router.navigateByUrl('login');
+    }else if( value === "NEW_SHOP"){
+      this.router.navigateByUrl('create-shop');
+    }
+  }
 }
